@@ -15,6 +15,7 @@ public class ConstantsIntegrationTests {
   public static final String iTestParForComplex = "parForComplex";
   public static final String iTestElementIndex = "elementIndex";
   public static final String iTestBlock = "block";
+  public static final String iTestSplit = "split";
   
   /**
    * No constructor.

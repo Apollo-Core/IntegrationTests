@@ -1,0 +1,42 @@
+---
+name: "split"
+dataIns:
+  - name: "int_array"
+    type: "collection"
+    source: "int_array"
+  - name: "chunks"
+    type: "number"
+    source: "chunks"
+workflowBody:
+  - parallelFor:
+      name: "forEach"
+      dataIns:
+        - name: "in"
+          type: "collection"
+          source: "split/int_array"
+          constraints:
+            - name: "split"
+              value: "split/chunks"
+      iterators: ["in"]
+      loopBody:
+        - function:
+            name: "function"
+            type: "SumCollection"
+            dataIns:
+              - name: "collectionToSum"
+                type: "collection"
+                source: "forEach/in"
+              - name: "waitTimeIn"
+                type: "number"
+                source: 1000
+            dataOuts:
+              - name: "collectionSum"
+                type: "number"
+      dataOuts:
+        - name: "result"
+          type: "collection"
+          source: "function/collectionSum"
+dataOuts:
+  - name: "result"
+    type: "collection"
+    source: "forEach/result"
