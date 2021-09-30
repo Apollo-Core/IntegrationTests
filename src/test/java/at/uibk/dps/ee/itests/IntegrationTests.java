@@ -61,4 +61,11 @@ class IntegrationTests {
     IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestSplit);
     iTest.runIntegrationTest();
   }
+  
+  @Test
+  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  void testReplicate() {
+    IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestReplicate);
+    iTest.runIntegrationTest();
+  }
 }

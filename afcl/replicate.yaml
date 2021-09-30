@@ -1,0 +1,30 @@
+---
+name: "replicateTimes"
+dataIns:
+  - name: "numberToReplicate"
+    type: "collection"
+    source: "numberToReplicate"
+  - name: "times"
+    type: "number"
+    source: "times"
+workflowBody:
+  - function:
+      name: "sumToNumber"
+      type: "SumCollection"
+      dataIns:
+        - name: "collectionToSum"
+          type: "collection"
+          source: "replicateTimes/numberToReplicate"
+          constraints:
+            - name: "replicate"
+              value: "replicateTimes/times"
+        - name: "waitTimeIn"
+          type: "number"
+          source: 1000
+      dataOuts:
+        - name: "collectionSum"
+          type: "number"
+dataOuts:
+  - name: "result"
+    type: "number"
+    source: "sumToNumber/collectionSum"
