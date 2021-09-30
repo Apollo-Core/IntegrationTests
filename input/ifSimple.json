@@ -3,5 +3,5 @@
   "b" : -2,
   "c1" : true,
   "c2": "abcBlaBla",
-  "wait": 2000
+  "wait": 10
 }

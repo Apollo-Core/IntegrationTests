@@ -17,7 +17,7 @@ workflowBody:
           source: 2
         - name: "waitTimeIn"
           type: "number"
-          source: 200
+          source: 20
       dataOuts: 
         - name: "sum"
           type: "number"
@@ -44,7 +44,7 @@ workflowBody:
               source: 1
             - name: "waitTimeIn"
               type: "number"
-              source: 200                          
+              source: 20                          
             dataOuts: 
             - name: "sum"
               type: "number"
@@ -60,7 +60,7 @@ workflowBody:
               source: "addition_Demo3/sum"
             - name: "waitTimeIn"
               type: "number"
-              source: 200                          
+              source: 20                          
             dataOuts: 
             - name: "sum"
               type: "number"              
@@ -77,7 +77,7 @@ workflowBody:
           source: "parallelFor/result_collection"  
         - name: "waitTimeIn"
           type: "number"
-          source: 200         
+          source: 20         
       dataOuts: 
         - name: "collectionSum"
           type: "number"          

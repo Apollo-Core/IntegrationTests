@@ -23,7 +23,7 @@ workflowBody:
               value: 1  
         - name: "waitTimeIn"
           type: "number"
-          source: 2000          
+          source: 10          
       dataOuts: 
         - name: "collectionSum"
           type: "number" 

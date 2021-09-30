@@ -28,7 +28,7 @@ workflowBody:
                 source: "forEach/in"
               - name: "waitTimeIn"
                 type: "number"
-                source: 1000
+                source: 20
             dataOuts:
               - name: "collectionSum"
                 type: "number"
