@@ -18,6 +18,7 @@ public class ConstantsIntegrationTests {
   public static final String iTestSplit = "split";
   public static final String iTestReplicate = "replicate";
   public static final String iTestWhile = "while";
+  public static final String iTestWhileFor = "whileFor";
   
   /**
    * No constructor.

@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fce05f86231, pid=37949, tid=37965
+#
+# JRE version: OpenJDK Runtime Environment (14.0.1+7) (build 14.0.1+7)
+# Java VM: OpenJDK 64-Bit Server VM (14.0.1+7, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/fedor/Repositories/gitHub/IntegrationTests/core.37949)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:40019 -javaagent:/home/fedor/software/eclipse/configuration/org.eclipse.osgi/655/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 at.uibk.dps.ee.guice.starter.EeConfiguration ./configs/whileForTmp.xml
+
+Host: Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz, 4 cores, 17G, Ubuntu 20.04.2 LTS
+Time: Tue Oct  5 08:09:55 2021 CEST elapsed time: 99 seconds (0d 0h 1m 39s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fce00275000):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=37965, stack(0x00007fcdbf834000,0x00007fcdbf935000)]
+
+Stack: [0x00007fcdbf834000,0x00007fcdbf935000],  sp=0x00007fcdbf9321d0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+C  [libjimage.so+0x4d7a]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x3a
+C  [libjimage.so+0x5271]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x50f4c3]

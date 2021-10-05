@@ -42,7 +42,7 @@
 
 	<root level="error">
  <appender-ref ref="STDOUT" />
-		<!-- <appender-ref ref="fileDebug" />
-		<appender-ref ref="fileError" /> --> 
+		<!--  <appender-ref ref="fileDebug" />
+		<appender-ref ref="fileError" /> -->  
 	</root>
 </configuration>
