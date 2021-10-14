@@ -2,16 +2,13 @@
 	<module
 		class="at.uibk.dps.ee.control.modules.EnactmentVerticleModule" />
 	<module class="at.uibk.dps.ee.io.modules.InputReaderFileModule">
-		<property name="filePath">./inputData/while.json</property>
+		<property name="filePath">./inputData/whileComplex.json</property>
 	</module>
 	<module class="at.uibk.dps.ee.io.modules.OutputPrinterModule" />
 	<module
 		class="at.uibk.dps.ee.io.modules.SpecificationInputModule">
-		<property name="filePathAfcl">./afcl/while.yaml</property>
-		<property name="filePathMappingFile">./typeMappings/while.json</property>
-	</module>
-	<module class="at.uibk.dps.ee.io.modules.LoggingModule">
-		<property name="pathToConfigFile">./logging/config/logback.xml</property>
+		<property name="filePathAfcl">./afcl/whileComplex.yaml</property>
+		<property name="filePathMappingFile">./typeMappings/whileComplex.json</property>
 	</module>
 	<module
 		class="at.uibk.dps.ee.visualization.modules.EnactmentViewerModule">

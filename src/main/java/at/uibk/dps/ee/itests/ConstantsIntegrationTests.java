@@ -19,6 +19,8 @@ public class ConstantsIntegrationTests {
   public static final String iTestReplicate = "replicate";
   public static final String iTestWhile = "while";
   public static final String iTestWhileFor = "whileFor";
+  public static final String iTestWhileComplex = "whileComplex";
+  public static final String iTestWhileCount = "whileCount";
   
   /**
    * No constructor.

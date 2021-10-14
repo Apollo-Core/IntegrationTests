@@ -2,13 +2,13 @@
 	<module
 		class="at.uibk.dps.ee.control.modules.EnactmentVerticleModule" />
 	<module class="at.uibk.dps.ee.io.modules.InputReaderFileModule">
-		<property name="filePath">./inputData/while.json</property>
+		<property name="filePath">./inputData/whileCount.json</property>
 	</module>
 	<module class="at.uibk.dps.ee.io.modules.OutputPrinterModule" />
 	<module
 		class="at.uibk.dps.ee.io.modules.SpecificationInputModule">
-		<property name="filePathAfcl">./afcl/while.yaml</property>
-		<property name="filePathMappingFile">./typeMappings/while.json</property>
+		<property name="filePathAfcl">./afcl/whileCount.yaml</property>
+		<property name="filePathMappingFile">./typeMappings/whileCount.json</property>
 	</module>
 	<module class="at.uibk.dps.ee.io.modules.LoggingModule">
 		<property name="pathToConfigFile">./logging/config/logback.xml</property>

@@ -82,4 +82,18 @@ class IntegrationTests {
     IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestWhileFor);
     iTest.runIntegrationTest();
   }
+
+  @Test
+  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  void testWhileNested() {
+    IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestWhileComplex);
+    iTest.runIntegrationTest();
+  }
+
+  @Test
+  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  void testWhileCount() {
+    IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestWhileCount);
+    iTest.runIntegrationTest();
+  }
 }
