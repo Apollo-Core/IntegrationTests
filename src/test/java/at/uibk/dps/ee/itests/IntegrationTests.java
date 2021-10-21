@@ -77,7 +77,7 @@ class IntegrationTests {
   }
 
   @Test
-  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  @Timeout(value = 8, unit = TimeUnit.SECONDS)
   void testWhileFor() {
     IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestWhileFor);
     iTest.runIntegrationTest();
