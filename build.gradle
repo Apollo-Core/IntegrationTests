@@ -38,8 +38,8 @@ dependencies {
   }
   
   // dependencies to Opt4 and OpenDse (JitPack/GitHub)
-  implementation 'com.github.FedorSmirnov89:opt4j:-SNAPSHOT'
-  implementation 'com.github.FedorSmirnov89:opendse:-SNAPSHOT'
+  implementation 'com.github.FedorSmirnov89:opt4j:master-SNAPSHOT'
+  implementation 'com.github.FedorSmirnov89:opendse:master-SNAPSHOT'
   
   // other dependencies
   implementation 'com.google.code.gson:gson:2.8.6'
