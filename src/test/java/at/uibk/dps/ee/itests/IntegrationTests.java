@@ -101,6 +101,13 @@ class IntegrationTests {
     IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestWhileCount);
     iTest.runIntegrationTest(vertx);
   }
+  
+  @Test
+  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  void testWhileWhile() {
+    IntegrationTest iTest = new IntegrationTest(ConstantsIntegrationTests.iTestWhileWhile);
+    iTest.runIntegrationTest(vertx);
+  }
 
   @BeforeEach
   void setup() {

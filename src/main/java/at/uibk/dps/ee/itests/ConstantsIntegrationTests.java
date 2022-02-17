@@ -21,13 +21,13 @@ public class ConstantsIntegrationTests {
   public static final String iTestWhileFor = "whileFor";
   public static final String iTestWhileComplex = "whileComplex";
   public static final String iTestWhileCount = "whileCount";
-  
+  public static final String iTestWhileWhile = "whileWhile";
+
   /**
    * No constructor.
    */
-  private ConstantsIntegrationTests() {
-  }
-  
+  private ConstantsIntegrationTests() {}
+
   /**
    * Returns the workflow file path corresponding to the given key work.
    * 
@@ -37,7 +37,7 @@ public class ConstantsIntegrationTests {
   public static String getAFCLPath(String iTestString) {
     return "./afcl/" + iTestString + ".yaml";
   }
-  
+
   /**
    * Returns the type mappings file path corresponding to the given key work.
    * 
@@ -47,7 +47,7 @@ public class ConstantsIntegrationTests {
   public static String getTypeMappingsPath(String iTestString) {
     return "./typeMappings/" + iTestString + ".json";
   }
-  
+
   /**
    * Returns the input file path corresponding to the given key work.
    * 
@@ -57,7 +57,7 @@ public class ConstantsIntegrationTests {
   public static String getInputPath(String iTestString) {
     return "./input/" + iTestString + ".json";
   }
-  
+
   /**
    * Returns the config file path corresponding to the given key work.
    * 
@@ -67,7 +67,7 @@ public class ConstantsIntegrationTests {
   public static String getConfigPath(String iTestString) {
     return "./configs/" + iTestString + ".xml";
   }
-  
+
   /**
    * Returns the expected result file path corresponding to the given key work.
    * 
@@ -77,6 +77,6 @@ public class ConstantsIntegrationTests {
   public static String getExpectedPath(String iTestString) {
     return "./expected/" + iTestString + ".json";
   }
-  
-  
+
+
 }

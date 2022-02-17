@@ -1,0 +1,66 @@
+---
+name: "whileWhile"
+dataIns:
+  - name: "inputOne"
+    type: "number"
+    source: "inputSource"
+  - name: "inputTwo"
+    type: "number"
+    source: "inputSource"
+workflowBody:
+  - while:
+      name: "while"
+      dataIns:
+        - name: "outerIterator"
+          type: "number"
+          source: "whileWhile/inputOne"            
+      loopBody:
+        - while:
+            name: "innerWhile"
+            dataIns:
+              - name: "innerIterator"
+                type: "number"
+                source: "whileWhile/inputTwo"
+            loopBody:
+              - function:
+                  name: "add"
+                  type: "Addition"
+                  dataIns:
+                  - name: "firstSummand"
+                    type: "number"
+                    source: "while/outerIterator"
+                  - name: "secondSummand"
+                    type: "number"
+                    source: "innerWhile/innerIterator"      
+                  - name: "waitTimeIn"
+                    type: "number"
+                    source: 1000      
+                  dataOuts: 
+                  - name: "sum"
+                    type: "number"
+            condition:
+              - data1: "innerWhile/counter"
+                data2: 3
+                type: "number"
+                operator: "<"
+                negation: false
+                combinedWith: "and"
+            dataOuts:
+              - name: "innerIterator"
+                type: "number"
+                source: "add/sum"
+      condition:
+        - data1: "while/counter"
+          data2: 3
+          type: "number"
+          operator: "<"
+          negation: "false"
+          combinedWith: "and"                 
+      dataOuts:
+        - name: "outerIterator"
+          type: "number"
+          source: "innerWhile/innerIterator" 
+dataOuts:
+  - name: "overallOutput"
+    type: "number"
+    source: "while/outerIterator"
