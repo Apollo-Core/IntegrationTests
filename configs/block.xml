@@ -4,6 +4,7 @@
 	<module class="at.uibk.dps.ee.io.modules.InputReaderFileModule">
 		<property name="filePath">./inputData/simpleBlock.json</property>
 	</module>
+	<module class="at.uibk.dps.ee.enactables.modules.CoreFunctionsModule"/>
 	<module class="at.uibk.dps.ee.io.modules.OutputPrinterModule" />
 	<module class="at.uibk.dps.ee.io.modules.LoggingModule">
 		<property name="pathToConfigFile">./logging/config/logback.xml</property>

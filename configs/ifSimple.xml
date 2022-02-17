@@ -3,6 +3,7 @@
 		class="at.uibk.dps.ee.control.modules.EnactmentVerticleModule">
 		<property name="pauseOnStart">false</property>
 	</module>
+	<module class="at.uibk.dps.ee.enactables.modules.CoreFunctionsModule"/>
 	<module class="at.uibk.dps.ee.io.modules.InputReaderFileModule">
 		<property name="filePath">./inputData/simpleIf.json</property>
 	</module>
