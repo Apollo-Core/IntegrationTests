@@ -4,9 +4,12 @@ dataIns:
   - name: "inputOne"
     type: "number"
     source: "inputSource"
-  - name: "inputTwo"
+  - name: "outerIterator"
     type: "number"
-    source: "inputSource"
+    source: "outerIterator"
+  - name: "innerIterator"
+    type: "number"
+    source: "innerIterator"        
 workflowBody:
   - while:
       name: "while"
@@ -20,7 +23,7 @@ workflowBody:
             dataIns:
               - name: "innerIterator"
                 type: "number"
-                source: "whileWhile/inputTwo"
+                source: "while/outerIterator"
             loopBody:
               - function:
                   name: "add"
@@ -28,19 +31,19 @@ workflowBody:
                   dataIns:
                   - name: "firstSummand"
                     type: "number"
-                    source: "while/outerIterator"
+                    source: "innerWhile/innerIterator"
                   - name: "secondSummand"
                     type: "number"
-                    source: "innerWhile/innerIterator"      
+                    source: 1      
                   - name: "waitTimeIn"
                     type: "number"
-                    source: 1000      
+                    source: 10  
                   dataOuts: 
                   - name: "sum"
                     type: "number"
             condition:
               - data1: "innerWhile/counter"
-                data2: 3
+                data2: "whileWhile/innerIterator"
                 type: "number"
                 operator: "<"
                 negation: false
@@ -51,7 +54,7 @@ workflowBody:
                 source: "add/sum"
       condition:
         - data1: "while/counter"
-          data2: 3
+          data2: "whileWhile/outerIterator"
           type: "number"
           operator: "<"
           negation: "false"

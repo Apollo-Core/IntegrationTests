@@ -1,3 +1,5 @@
 {
-	"inputSource" : 2
+	"inputSource" : 1,
+	"outerIterator": 4,
+	"innerIterator": 4
 }
